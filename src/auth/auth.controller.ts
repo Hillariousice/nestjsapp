@@ -12,8 +12,8 @@ import { AuthService } from './auth.service';
 @Controller('auth')
 export class AuthController {
   constructor(private readonly authService: AuthService) {}
-
-  @Post('/login')
+  // Login a user
+@Post('/login')
   async login(@Body(new ValidationPipe()) loginDto: LoginDto) {
     const { email, password } = loginDto;
 
